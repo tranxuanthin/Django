@@ -1,0 +1,19 @@
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); */
+#name {
+	width: 20%;
+	height: 60px;
+  }
+
+#password {
+	width: 20%;
+	height: 60px;
+  }
+#email1 {
+	width: 20%;
+}
+#form {
+	margin-left: 420px;
+}
+
+  

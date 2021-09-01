@@ -1,0 +1,22 @@
+<div id = 'form' class="form_dang_nhap" >
+	<h2>Đăng ký</h2>
+	<form action="{% url 'dangkithanhvien' %}" method="POST">
+		{% csrf_token %}
+		<div class="o_nhap">
+			
+			<input type="text" name="name" id="name" required="">
+			<label>Tên Đăng Nhập</label>
+		</div>
+		<div class="o_nhap">
+			<input type="password" name="password" id="password" required="">
+			<label>Mật Khẩu</label>
+		</div>
+        <div class="o_nhap">
+			<input type="email" name="email" id="email1" required="">
+			<label>Email</label>
+		</div>
+		<input type="submit" name="" value="Đăng ký">
+		<input  type="button" onclick="location.href={% url 'dangnhap' %}" name="" value="Đăng nhập">
+	</form>
+	
+</div>

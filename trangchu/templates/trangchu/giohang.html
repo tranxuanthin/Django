@@ -1,0 +1,89 @@
+{% load mathfilters %}
+<!doctype html>
+<html lang="vi">
+
+{% include "trangchu/head.html" %}
+{% include "trangchu/top.html" %}
+{% include "trangchu/menu.html" %}
+<br>
+<br>
+
+  
+<body>
+    
+    <div class='container-sm' >
+        <div class="row">
+            <div class="col-sm-3" style="font-size: 25px; border-style: solid;">
+                Tên sản phẩm
+                
+                
+            </div>
+            <div class="col-sm-3" style="font-size: 25px; border-style: solid;">
+               Số lượng
+            </div>
+            <div class="col-sm-3" style="font-size: 25px; border-style: solid;">
+                Giá cả
+            </div>
+            <div class="col-sm-1" style="font-size: 25px; border-style: solid;">
+                Giảm 
+            </div>
+            <div class="col-sm-2" style="font-size: 25px; border-style: solid;">
+                Thành tiền
+            </div>
+        </div>
+        
+        {% for key,value in request.session.giohang.items %}
+            
+        <div class='row'>
+            <div class="col-sm-3" style="font-size: 15px; border-style: outset;  ">
+                <div style="margin-top: 30px;"><center>{{value.name}}</center></div>
+                 
+               
+                
+            </div>
+            <div class="col-sm-3" style="font-size: 15px; border-style: outset;">
+                <div style="margin-left: 100px;">
+                <button onclick="addone({{key}})">+</button>
+                <table >
+                    <tr>
+                        <th>{{value.num}}</th>  
+                    </tr>
+                </table>
+                <button onclick="subone({{key}})">-</button>
+            </div>
+            </div>
+            <div class="col-sm-3" style="font-size: 15px; border-style: outset;">
+                <center style="margin-top: 30px;">{{value.price}}$</center>
+            </div>
+            <div class="col-sm-1" style="font-size: 15px; border-style: outset;">
+                <center style="margin-top: 30px;">{{value.promotion}}%</center>
+            </div>
+            <div class="col-sm-2" style="font-size: 15px; border-style: outset;">
+                <center style="margin-top: 30px;">{{value.num|mul:value.price}}$</center>
+            </div>
+        </div>
+        {% endfor %}
+        
+        <div class="row">
+            <div class="col-sm-9"style="font-size: 30px; border-style: outset;">Tổng tiền </div>
+            
+            <div class="col-sm-3"style="font-size: 30px; border-style: outset;"> {{total}}$</div>
+            
+                
+            </div>
+            
+            
+        </div>
+        <div class="row">
+            <div class="col-sm-9"></div>
+            <div class="col-sm-3"><button onclick="xoagiohang() ">  Xóa giỏ hàng</button> </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+{% include "trangchu/footer.html" %}
+
+

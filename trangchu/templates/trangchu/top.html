@@ -1,0 +1,133 @@
+{% load static %}
+<div class="page-wrapper"><div class="header-container header-style-1">
+	<div class="header-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 header-top1">
+					<div class="customer-action-hd">
+						<span class="welcome-text">
+						Chào mừng bạn đến với THOL Store						</span>
+						
+												
+													<a href="{% url 'dangkithanhvien' %}" title="Đăng kí">Đăng kí</a> hoặc <a href="{% url 'dangnhap' %}" title="Đăng nhập">Đăng nhập</a>
+											</div>
+				</div>
+				
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 header-top2">
+					
+					<div class="inner">
+						<a href="{% url 'giohang' %}"><img src="{% static 'trangchu/media/header-icon-cart.png'%}" style="width: 25px; height: 25px;"/></a>
+						
+						{% if request.session.user  is not None %}
+						
+						<div class="dropdown-block block-login">							
+															<a class="cus-btn" href="https://www.thol.com.vn/customer/account/login/" title="Đăng nhập">
+									<i class="fa fa-lock"></i>
+									{{request.session.user}} 							</a>									
+													</div>
+						<div class="dropdown-block block-myacount">
+							<div class="account-links">
+								<div class="dropdown-toggle">									
+									<a class="myaccount-link" href="{% url 'logout_view'%}" title="Tài khoản của tôi">
+										<i class="fa fa-user"></i>Logout</a>
+								</div>
+						{% else %}
+						<div class="dropdown-block block-login">							
+															<a class="cus-btn" href="{% url 'dangnhap' %}" title="Đăng nhập">
+							<i class="fa fa-lock"></i>
+							Đăng nhập								</a>									
+											</div>
+						<div class="dropdown-block block-myacount">
+						<div class="account-links">
+						<div class="dropdown-toggle">									
+							
+						</div>
+						{% endif %}
+		
+						
+								
+								
+							</div>
+							
+						</div>
+						<div class="language-wrapper">
+</div>												
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-middle">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 logo-header">
+					<div class="logo-wrapper"><h1 class="logo-content">
+    <strong class="logo">
+		<a class="logo" href="{% url 'trangchu' %}" title="THOL Store">
+			<img src="https://www.thol.com.vn/pub/media/logo/stores/5/logo.jpg"
+				 alt="THOL Store"
+				 width="160"				 height="62"			/>
+
+		</a>
+	</strong>
+</h1>
+
+</div>				</div>
+				
+				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 header-middle-right">
+					<div class="middle-right-content">
+						<div class="menu-horizontal">
+										<nav class="sm_megamenu_wrapper_horizontal_menu sambar" id="sm_megamenu_menu610e09d19eb88" data-sam="10815706571628309969">
+		<div class="sambar-inner">
+					<span class="btn-sambar" data-sapi="collapse" data-href="#sm_megamenu_menu610e09d19eb88">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</span>
+			<ul class=" sm_megamenu_menu sm_megamenu_menu_black" data-jsapi="on">
+		
+														<li class="other-toggle 							sm_megamenu_lv1 sm_megamenu_drop parent    ">
+						<a class="sm_megamenu_head sm_megamenu_drop " href="{% url 'trangchu' %}"  id="sm_megamenu_117">
+																<span class="sm_megamenu_icon sm_megamenu_nodesc">
+																								<span class="sm_megamenu_title">Trang chủ</span>
+																			</span>
+						</a>
+																													<li class="other-toggle 							sm_megamenu_lv1 sm_megamenu_drop parent    ">
+						<a class="sm_megamenu_head sm_megamenu_drop " href="{% url 'trangchu' %}"  id="sm_megamenu_118">
+																<span class="sm_megamenu_icon sm_megamenu_nodesc">
+																								<span class="sm_megamenu_title">Giới thiệu</span>
+																			</span>
+						</a>
+																													<li class="other-toggle 							sm_megamenu_lv1 sm_megamenu_drop parent    ">
+						<a class="sm_megamenu_head sm_megamenu_drop " href="{% url 'trangchu' %}"  id="sm_megamenu_119">
+																<span class="sm_megamenu_icon sm_megamenu_nodesc">
+																								<span class="sm_megamenu_title">Liên hệ</span>
+																			</span>
+						</a>
+																													<li class="other-toggle 							sm_megamenu_lv1 sm_megamenu_drop parent    ">
+						<a class="sm_megamenu_head sm_megamenu_drop " href="{% url 'trangchu' %}"  id="sm_megamenu_125">
+																<span class="sm_megamenu_icon sm_megamenu_nodesc">
+																								<span class="sm_megamenu_title">Tài Khoản Ngân Hàng</span>
+																			</span>
+						</a>
+																						</ul>
+		</div>
+	</nav>
+
+
+						</div>
+	
+						<div class="header-support">
+	<div class="inner">
+		
+		
+		<strong>Hotline:</strong> <span>1900 2050</span>
+		<p>Email:  sales@thol.com.vn</p>
+		
+	</div>
+</div>					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	

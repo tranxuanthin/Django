@@ -1,0 +1,375 @@
+
+
+<!doctype html>
+<html lang="vi">
+{% include "trangchu/head.html" %}
+
+<body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://www.thol.com.vn/pub/static/frontend/Sm/revo/vi_VN/images/loader-2.gif"}}' class="cms-home-demo-01 cms-index-index page-layout-1column">
+    {% include "trangchu/top.html" %}
+    {% include "trangchu/menu.html" %}
+    
+
+
+	
+	
+						
+						
+		
+					
+
+<main id="maincontent" class="page-main"><a id="contentarea" tabindex="-1"></a>
+<div class="columns col1-layout"><div class="container"><div class="row"><div class="col-lg-12 col-md-12"><div class="page messages"><div data-placeholder="messages"></div>
+<div data-bind="scope: 'messages'">
+    <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: message.text"></div>
+        </div>
+    </div>
+    <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: message.text"></div>
+        </div>
+    </div>
+</div>
+
+</div><div class="column main"><input name="form_key" type="hidden" value="wpfp62yKT48Pn1lv" /><div id="authenticationPopup" data-bind="scope:'authenticationPopup'" style="display: none;">
+    
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    
+</div>
+<script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/section-config":{"sections":{"stores\/store\/switch":"*","directory\/currency\/switch":"*","*":["messages"],"customer\/account\/logout":"*","customer\/account\/loginpost":"*","customer\/account\/createpost":"*","customer\/ajax\/login":["checkout-data","cart"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart"],"checkout\/cart\/delete":["cart"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","checkout-data","last-ordered-items"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","checkout-data"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data"],"multishipping\/checkout\/overviewpost":["cart"],"authorizenet\/directpost_payment\/place":["cart","checkout-data"],"review\/product\/post":["review"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"buynow\/cart\/add":["cart"],"cartpro\/cart\/add":["cart","messages"],"cartpro\/compare\/remove":["compare-products","messages"],"cartpro\/compare\/add":["compare-products","messages"]},"clientSideSections":["checkout-data"],"baseUrls":["https:\/\/www.thol.com.vn\/"]}}}</script>
+<script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/customer-data":{"sectionLoadUrl":"https:\/\/www.thol.com.vn\/customer\/section\/load\/","cookieLifeTime":"3600","updateSessionUrl":"https:\/\/www.thol.com.vn\/customer\/account\/updateSession\/"}}}</script>
+<script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/invalidation-processor":{"invalidationRules":{"website-rule":{"Magento_Customer\/js\/invalidation-rules\/website-rule":{"scopeConfig":{"websiteId":1}}}}}}}</script>
+
+<script>
+	function _SmQuickView(){
+		var $ = (typeof $ !== 'undefined') ? $ : jQuery.noConflict();
+		var	pathbase = 'quickview/index/index',
+			_item_cls = $('.products-grid .item .item-inner, .products-list .item .item-inner, .id5-deals .sm-deals .deals-item, .id5-basicproducts .sm-basic-products .bs-items .bs-item'),
+			_item_cls_show_button = $('.products-grid .item .item-inner .box-image, .products-list .item .item-inner .box-image, .id5-deals .sm-deals .deals-item .deals-image, .id5-basicproducts .sm-basic-products .bs-items .bs-item .bs-image'),
+			_base_url = 'https://www.thol.com.vn/';
+		var baseUrl = _base_url + pathbase;
+		var _arr = [] , _flag = false;
+		if(_item_cls.length > 0 && _item_cls_show_button.length > 0){
+			_item_cls.each(function(idx) {
+				var _self = $(this),
+				    _id_product = _self.find('[data-product-id]').attr('data-product-id'),
+				 	_url = baseUrl+'/id/'+_id_product,
+					_button_container = _self.find(_item_cls_show_button).length ? _self.find(_item_cls_show_button) :  _self,
+					_button = "<a class='sm_quickview_handler' title='Quick View' href='"+_url+"'></a>";
+					if (_id_product && $('.sm_quickview_handler',_button_container).length <= 0){
+						_button_container.append(_button);
+				    }
+					
+					if (idx == (_item_cls.length-1) && $('.sm_quickview_handler').length){
+						_SmPopupView();
+					}
+			});
+			
+		}
+	}
+
+	function _SmPopupView(){
+		var $ = (typeof $ !== 'undefined') ? $ : jQuery.noConflict();
+		$('.sm_quickview_handler').magnificPopup({
+			type: 'ajax',
+			ajax: {
+				settings: {type: 'POST', dataType:'html', cache:false}
+			},
+			closeOnBgClick: false, 
+			preloader: true,
+			tLoading: '',
+			callbacks: {
+				parseAjax: function(mfpResponse) {
+					mfpResponse.data = $(mfpResponse.data);
+				},
+				ajaxContentAdded: function() {
+					$(this.contentContainer).trigger('contentUpdated');
+					
+				}
+			  }
+		});
+	}
+</script>
+
+
+
+<div class="home-style home-page-1">
+<div class="content1-right">
+<div class="image-slider-home">	<div id="sm_imageslider_20832842071628309973" class="sm-imageslider theme1">
+
+		
+		
+		<!--div class="sm-imageslider-loading">
+			<div class="cssload-square">
+				<div class="cssload-square-part cssload-square-green"></div>
+				<div class="cssload-square-part cssload-square-pink"></div>
+				<div class="cssload-square-blend"></div>
+			</div>
+		</div-->
+		<div class="sm-imageslider-inner theme1">
+			<div class="sm-imageslider-content owl-carousel">
+									<div class="item">
+						<div class="item-image">
+							<a href="https://www.thol.com.vn/truefit.html"
+							   title="TRUEFIT"
+								target="_blank" >
+								<img src="https://www.thol.com.vn/pub/media/wysiwyg/imageslider/True-Fit-banner-home.jpg" alt="TRUEFIT"/>
+							</a>
+						</div>
+
+											</div>
+									<div class="item">
+						<div class="item-image">
+							<a href="https://www.thol.com.vn/brand/evogen-vietnam.html"
+							   title="EVOGEN"
+								target="_blank" >
+								<img src="https://www.thol.com.vn/pub/media/wysiwyg/banner-evogen1.jpg" alt="EVOGEN"/>
+							</a>
+						</div>
+
+											</div>
+									<div class="item">
+						<div class="item-image">
+							<a href="/san-mass-effect13.html"
+							   title="San Mass Effect"
+								target="_blank" >
+								<img src="https://www.thol.com.vn/pub/media/wysiwyg/imageslider/slide-mass-effect.jpg" alt="San Mass Effect"/>
+							</a>
+						</div>
+
+											</div>
+							</div>
+		</div>
+
+		
+	</div>
+
+	<script type="text/javascript">
+		require([
+			'jquery',
+			'owlcarousel',
+			'domReady!'
+		], function ($,owlCarousel) {
+				;
+				jQuery( document ).ready(function() {
+					(function (element) {
+						var $element = jQuery(element),
+							$sm_imageslider = jQuery('.sm-imageslider-content', $element);
+							$sm_imageslider.owlCarousel({
+								
+																	center: false,
+									startPosition: 0,
+									margin: 0,
+									responsive: {
+										0: {
+											items:1										},
+										768: {
+											items:1										}
+									},
+																
+								
+								nav: false,
+								loop: true,
+								dots: true,
+								dotsSpeed: 1000,
+
+								navText: ['&#139;', '&#155;'],
+								slideBy: 1,
+								autoplay: true,
+								autoplayTimeout: 5000,
+								autoplayHoverPause: true,
+								autoplaySpeed: 800,
+								
+								navSpeed: 1000,
+								mouseDrag: true,
+								
+								responsiveRefreshRate: 100,
+							});
+
+						
+						
+					})('#sm_imageslider_20832842071628309973');
+				});
+			});
+	</script>
+</div>
+<div class="static-image-1"><ul class="static-image">
+<li><a title="Whey protein" href="/protein/whey-casein.html"> <img src="https://www.thol.com.vn/pub/media/wysiwyg/home/banner-whey.jpg" alt="Whey protein hấp thu nhanh BBT" /> </a></li>
+<li><a title="FAT BURNER" href="/fatloss/fat-burner.html"> <img src="https://www.thol.com.vn/pub/media/wysiwyg/home/banner-fatburner.jpg" alt="đốt mỡ giảm c&acirc;n BBT" /> </a></li>
+<li><a title="MASS GAINER" href="/protein/complete-protein/hight-calories-mass-gainer.html"> <img src="https://www.thol.com.vn/pub/media/wysiwyg/home/banner-mass.jpg" alt="tăng c&acirc;n tăng cơ bbt" /> </a></li>
+</ul></div>
+</div>
+<div class="row"></div>
+<div class="h1-banner2-w hidden-xs">
+<div class="row">
+<div class="banner banner22 col-lg-6 col-md-6 col-sm-6 col-xs-12"><a href="https://www.thol.com.vn/vitadapt-vitamin.html" target="_blank"><img src="https://www.thol.com.vn/pub/media/wysiwyg/banner/Vitadapt-1-hang-da-ve.jpg" alt="VITAMIN KHOÁNG CHẤT SỐNG KHOẺ TẬP KHOẺ - Hàng ngon đã về, order ngay kẻo lỡ" /></a></div>
+<div class="banner banner21 col-lg-6 col-md-6 col-sm-6 col-xs-12"><a href="https://www.thol.com.vn/isoject.html" target="_blank"><img src="https://www.thol.com.vn/pub/media/wysiwyg/Khuyen-Mai/2021-07-03_ISOJECT_TANG_TRUEFIT_HD.jpg" alt="ISOJECT 28 LIỀU TẶNG TRUEFIT 20 LIỀU" /></a></div>
+
+</div>
+</div>
+<div class="clearfix" style="height: 30px;"></div>
+<div class="from-blog">
+<div class="font-title home-title">
+<h2>Sản phẩm </h2>
+</div>
+</div>
+    
+<div class="home_category_grid clearfix">
+    <div class="spc-items-inner">
+        <ol class="td_widget_product_list">
+                                    
+            {% for item in Product %}
+            <li class="td_widget_product_item">
+                <div class="td_box_product ">
+                    <a href="{% url 'chitietsp' item.id %}" title="{{item.name}}">
+                        <img src="{{item.logo.url}}" class="img-responsive" alt="Labrada LeanBody For Her - Bữa ăn thay thế cho phái đẹp (80 Gói)" />
+                    </a>
+                    <h3 class="product name product-item-name product-name">
+                        <a href="{% url 'chitietsp' item.id %}" title=" {{item.name}}">
+							{{item.name}}               </a>
+
+                    </h3>
+                    		
+                    <div class="price-box price-final_price" data-role="priceBox" data-product->
+    
+
+<span class="price-container price-final_price tax weee"
+        >
+        <span                  data-price-amount="3500000"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+        >
+        <span class="price">{{item.price}} $</span>    </span>
+        </span>
+
+</div>                                    </div>
+            </li>
+			{% endfor %}
+                                    
+            
+           
+
+
+
+
+
+<br />
+<div class="from-blog">
+<div class="font-title home-title">
+<h2>Protein tăng c&acirc;n</h2>
+</div>
+</div>
+    
+<div class="home_category_grid clearfix">
+    <div class="spc-items-inner">
+        <ol class="td_widget_product_list">
+                                    
+            
+            <li class="td_widget_product_item">
+                <div class="td_box_product ">
+                    <a href="https://www.thol.com.vn/san-mass-effect13.html" title="S.A.N Mass Effect Revolution bịch 5.9kg">
+                        <img src="https://www.thol.com.vn/pub/media/catalog/product/cache/thumbnail/400x400/beff4985b56e3afdbeabfc89641a4582/a/m/aminolean-02_1_1_2.jpg" class="img-responsive" alt="S.A.N Mass Effect Revolution bịch 5.9kg" />
+                    </a>
+                    <h3 class="product name product-item-name product-name">
+                        <a href="https://www.thol.com.vn/san-mass-effect13.html" title=" S.A.N Mass Effect Revolution bịch 5.9kg">
+                             S.A.N Mass Effect Revolution bịch 5.9kg                        </a>
+
+                    </h3>
+                    		
+                    <div class="price-box price-final_price" data-role="priceBox" data-product->
+    
+
+<span class="price-container price-final_price tax weee"
+        >
+        <span                  data-price-amount="1800000"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+        >
+        <span class="price">1.800.000 ₫</span>    </span>
+        </span>
+
+</div>                                    </div>
+            </li>
+                                    
+            
+           
+
+
+
+
+
+<br />
+<div class="from-blog">
+<div class="font-title home-title">
+<h2>Giảm mỡ &amp; giảm c&acirc;n</h2>
+</div>
+</div>
+    
+<div class="home_category_grid clearfix">
+    <div class="spc-items-inner">
+        <ol class="td_widget_product_list">
+                                    
+            
+            <li class="td_widget_product_item">
+                <div class="td_box_product ">
+                    <a href="https://www.thol.com.vn/nutrex-lipo-6-black.html" title="Nutrex Lipo 6 Black fat burner Đốt Mỡ Giảm Cân">
+                        <img src="https://www.thol.com.vn/pub/media/catalog/product/cache/thumbnail/400x400/beff4985b56e3afdbeabfc89641a4582/l/i/lipo_6_black.png" class="img-responsive" alt="Nutrex Lipo 6 Black fat burner Đốt Mỡ Giảm Cân" />
+                    </a>
+                    <h3 class="product name product-item-name product-name">
+                        <a href="https://www.thol.com.vn/nutrex-lipo-6-black.html" title=" Nutrex Lipo 6 Black fat burner Đốt Mỡ Giảm Cân">
+                             Nutrex Lipo 6 Black fat burner Đốt Mỡ Giảm Cân                        </a>
+
+                    </h3>
+                    		
+                <div class="price-box price-final_price" data-role="priceBox" data-product->
+    <span class="special-price">
+        
+
+<span class="price-container price-final_price tax weee"
+        >
+            <span class="price-label">Giá đặc biệt</span>
+        <span                  data-price-amount="650000"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+        >
+        <span class="price">650.000 ₫</span>    </span>
+        </span>
+    </span>
+    <span class="old-price">
+        
+
+<span class="price-container price-final_price tax weee"
+        >
+            <span class="price-label">Giá thông thường</span>
+        <span                  data-price-amount="700000"
+        data-price-type="oldPrice"
+        class="price-wrapper "
+        >
+        <span class="price">700.000 ₫</span>    </span>
+        </span>
+    </span>
+
+</div>                                    </div>
+            </li>
+                                    
+            
+           
+
+
+
+
+&nbsp;<div class="h1-banner3"><a href="#"><img src="https://www.thol.com.vn/pub/media/wysiwyg/home/home-bottom-banner-wide.jpg" alt="" /></a></div> <div class="from-blog">
+<div class="font-title home-title">
+
+{% include "trangchu/footer.html" %}
+</html>

@@ -1,0 +1,21 @@
+
+<div id = 'form' class="form_dang_nhap" >
+	<h2>Đăng Nhập</h2>
+	<form action="{% url 'yeucaudn' %}">
+		{% csrf_token %}
+		<div class="o_nhap">
+			
+			<input type="text" name="name" id="name" required="">
+			<label>Tên Đăng Nhập</label>
+		</div>
+		<div class="o_nhap">
+			<input type="password" name="password" id="password" required="">
+			<label>Mật Khẩu</label>
+		</div>
+		<input type="submit" name="" value="Đăng Nhập">
+		<input type="hidden" name="next" value="{{ request.GET.next }}"/>
+		<input  type="button" onclick="location.href={% url 'dangki' %}" name="" value="Đăng ký">
+		
+	</form>
+	
+</div>

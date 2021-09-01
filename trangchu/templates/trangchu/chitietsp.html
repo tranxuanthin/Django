@@ -1,0 +1,27 @@
+
+{% load static %}
+<!doctype html>
+<html lang="vi">
+{% include "trangchu/head.html" %}
+{% include "trangchu/top.html" %}
+{% include "trangchu/menu.html" %}
+<div class ="container-sm pt-3 bg-primary ">
+    <div class="row">
+        <div class="col"><p>
+            <img src="{{sanpham.logo.url}}" alt="Mountain View" style="width:500px;height:500px;"">
+        </p></div>
+        <div class="col" ><p style="font-size: large;">{{sanpham.description}} </p><br>
+            <div class="container">
+                <input id='muahang' type="text"  value="1" style="width:50px; height: 25px; font-size: larger; color: black;">
+                <button  onclick="addcart({{sanpham.id}})" style="width:100px; height: 25px; font-size: larger; color: rgb(50, 159, 209);">Mua ngay</button>
+            </div>
+            
+               
+        
+            
+        </div>
+        
+    </div>
+</div>
+
+{% include "trangchu/footer.html" %}

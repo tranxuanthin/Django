@@ -1,0 +1,135 @@
+
+
+        
+                <a id="yt-totop" href="javascript:void(0)" title="Go to Top"></a>
+    
+            <script type="text/javascript">
+                require([
+                    'jquery'
+                ], function ($) {
+                    $("#yt-totop").hide();
+                    $(function () {
+                        var wh = $(window).height();
+                        var whtml =  $(document).height();
+                        $(window).scroll(function () {
+                            if ($(this).scrollTop() > whtml/10) {
+                                $('#yt-totop').fadeIn();
+                            } else {
+                                $('#yt-totop').fadeOut();
+                            }
+                        });
+                        $('#yt-totop').click(function () {
+                            $('body,html').animate({
+                                scrollTop: 0
+                            }, 800);
+                            return false;
+                        });
+                    });
+                });
+            </script>
+            
+    </div>
+    
+    
+    
+    
+    
+    <div class="phone_bottom" style="bottom: 10px;">
+        <a href="tel:19002050"><span class="active_phone"><i class="fa fa-phone"></i></span></a>
+    </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39934668-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-39934668-3');
+    </script>
+    
+    <!--script type="text/javascript"  src="https://apiv2.popupsmart.com/api/Bundle/353925" async></script-->
+    
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v3.3'
+        });
+      };
+    
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+        function addcart(id){
+            var x = document.getElementById("muahang").value;
+            $.post('{% url 'addcart' %}',{'id':id,'num':x,'csrfmiddlewaretoken':'{{csrf_token}}'},function(data){
+                alert('bạn vừa mua thêm '+ x + ' sản phẩm thành công');
+            });
+        }
+    </script>
+   <script>
+    function addone(id){
+        
+        $.post('{% url 'addcart' %}',{'id':id,'num':1,'csrfmiddlewaretoken':'{{csrf_token}}'},function(data){
+            location.reload()
+        });
+    }
+</script>
+<script>
+    function subone(id){
+        
+        $.post('{% url 'addcart' %}',{'id':id,'num':-1,'csrfmiddlewaretoken':'{{csrf_token}}'},function(data){
+            location.reload()
+        });
+    }
+</script>
+<script>
+    function xoagiohang(){
+        
+        $.post('{% url 'xoagiohang' %}',{'csrfmiddlewaretoken':'{{csrf_token}}'},function(data){
+            location.reload()
+        });
+    }
+</script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="288773517926108"
+      logged_in_greeting="Bạn cần hỗ trợ gì không ạ"
+      logged_out_greeting="Bạn cần hỗ trợ gì không ạ">
+    </div></div></footer>
+    <div id="cartpro_process" class="cartpro-process">
+        <div class="cartpro-loadmark">
+            <div class="cartpro-imageload">
+                <img alt="Đang tải..." src="https://www.thol.com.vn/pub/static/frontend/Sm/revo/vi_VN/Sm_Cartpro/images/ajax_loading.gif">
+                <div class="cartpro-text">
+                    Vui lòng chờ...			</div>
+            </div>
+        </div>
+    </div>
+    <div id="cartpro_modal" class="cartpro-modal ">
+        <div class="cpmodal-wrapper">
+            <span class="cpmodal-close cp-close">x</span>
+            <div class="cpmodal-message"></div>
+            <div class="cpmodal-iframe"></div>
+            <div class="cpmodal-action">
+                <a class="cpmodal-button cp-close cartpro-time" title="Tiếp tục"  href="#">
+                    <span class="cpmodal-time"></span>Tiếp tục</a>
+                <a class="cpmodal-button  cpmodal-viewcart cpmodal-display  cartpro-hidden" 
+                    title="View cart & checkout" 
+                    href="https://www.thol.com.vn/checkout/cart/">
+                    View cart & checkout			</a>
+                <a  class="cpmodal-button  cartpro-wishlist cpmodal-display  cartpro-hidden " href="https://www.thol.com.vn/wishlist/">Go to Wishlist</a>
+                <a  class="cpmodal-button  cartpro-compare cpmodal-display  cartpro-hidden" href="https://www.thol.com.vn/catalog/product_compare/index/uenc/aHR0cHM6Ly93d3cudGhvbC5jb20udm4v/">Go to Compare</a>
+            </div>
+            <div class="cpmodal-form">
+            </div>
+        </div>
+    </div>
